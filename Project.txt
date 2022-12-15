@@ -1,0 +1,13 @@
+-mila manao thread 
+-mila  serveur Principal  - Finale
+-fonction send - receive-receiveServer-share
+-mila path hametrahana an'ilay fichier
+
+**Client
+	send
+	getExtension
+**Server
+	receive
+	share
+**Server1
+	receiveServer
