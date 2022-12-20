@@ -1,0 +1,23 @@
+ setSize(550, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        lb = new JLabel("the File In Server");
+        lb.setBounds(800, 0, 50,30);
+        MyServer s = new MyServer();
+        Vector<String> vs = s.checkFile();
+        Vector<String> title = new  Vector<String>();
+        title.add("The Files");
+        String [] titre = new String [title.size()];
+        titre [0] = title.get(0);
+        Vector< Vector<String>> vvs = new Vector< Vector<String> >();
+        vvs.add(vs);
+        String [][] str = new String [vs.size()][title.size()];
+        for (int i = 0; i < vvs.size(); i++) {
+            for (int j = 0; j < vvs.get(i).size() ; j++) {
+             str [j][i]= vvs.get(i).get(j);              
+            }
+        }
+        tableau = new JTable(str, titre);
+        //this.getContentPane().add(new JScrollPane(tableau));
+        this.add(lb);
+        setVisible(true);
